@@ -1,0 +1,237 @@
+
+
+/* CSS code for styling the landing page */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("hero.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero .cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.about {
+    padding: 4rem 0;
+    background-color: #f0f0f0;
+}
+
+.about h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about .col {
+    flex: 1 1 300px;
+}
+
+.about .col img {
+    width: 100%;
+    height: auto;
+}
+
+.about .col h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.about .col p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.testimonials {
+    padding: 4rem 0;
+}
+
+.testimonials h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.testimonials .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.testimonials .col {
+    flex: 1 1 300px;
+    border: 1px solid #cccccc;
+    padding: 2rem;
+}
+
+.testimonials .col img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.testimonials .col h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.testimonials .col p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.testimonials .col .rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.testimonials .col .rating ion-icon {
+    color: #ff0000;
+}
+
+.subscribe {
+    padding: 4rem 0;
+    background-color: #f0f0f0;
+}
+
+.subscribe h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.subscribe form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.subscribe form input {
+    width: 400px;
+    padding: 1rem;
+    border: 1px solid #cccccc;
+    font-size: 1.2rem;
+}
+
+.subscribe form button {
+    padding: 1rem 2rem;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.footer {
+    padding: 2rem 0;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+
+    /* CSS code for responsive design */
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .subscribe form {
+        flex-direction: column;
+    }
+
+    .subscribe form input {
+        width: 100%;
+    }
+}
+
+.hero {
+    /* Add parallax effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.5s ease-in-out;
+}
+
+.hero:hover {
+    /* Darken the background on hover */
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.cta:hover {
+    /* Add hover effect for CTA button */
+    transform: scale(1.05);
+    background-color: #cc0000;
+}
+
+/* Testimonials Animation */
+.testimonials .col {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.testimonials .col.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
